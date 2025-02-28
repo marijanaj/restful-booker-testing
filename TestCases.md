@@ -1,20 +1,31 @@
 # Test Cases
 ## Restful booker ( Authorization and CRUD proces)
 
-<details>
-  <summary> CRUD operations (Create, read, update and delete) feature covered</summary>
+><h2><summary> CRUD operations (Create, read, update and delete) feature covered</summary></h2>
   
 ### CRUD operations (Create, read, update and delete records of bookinsses) feature covered
-1. Get valid token
-2. Create new booking
-3. Check that the new record show
-4. Update creaated booking
-5. Check that booking updated
-6. Delete record booking
+1. Get valid token ```POST: https://restful-booker.herokuapp.com/auth```
+2. Create new booking with parameters ```POST https://restful-booker.herokuapp.com/booking```
+  ```
+Request body:
+   firstname 
+   lastname
+   totalprice
+   checkin
+   checkout
+   additionalneeds
+```
+  ```
+Header
+  Content-Type
+```
+4. Check that the new record show  ```GET https://restful-booker.herokuapp.com/booking/:id```
+5. Update creaated booking ```PUT https://restful-booker.herokuapp.com/booking/:id```
+6. Check that booking updated ```PATCH  https://restful-booker.herokuapp.com/booking/:id```
+7. Delete record booking ```DELETE  https://restful-booker.herokuapp.com/booking/:id```
    
-</details>
-<details>
-  <summary> Auth - CreateToken -API  </summary>
+
+><h2><summary> Auth - CreateToken -API  </summary></h2>
   
 ### Successful Authentication
 1. Send valid username and passorcd on https://restful-booker.herokuapp.com/auth
@@ -46,10 +57,8 @@
 3. Verify HTTP status code is show
 4. Verify that API doesn't returns token
 5. Check message in response "Bad credentials"
-</details>
 
-<details>
-  <summary> Booking - CreateBooking -API  </summary>
+><h2><summary> Booking - CreateBooking -API  </summary></h2>
 
 ### Successful Create Booking
 1. Send valid parameters on POST method (https://restful-booker.herokuapp.com/booking to create new records)
@@ -85,6 +94,4 @@
 1. Send format JSON in body https://restful-booker.herokuapp.com/auth
 2. ANd set XML data show in response
 4. Verify HTTP status code is 400, becuase sent wrong format of body parameters
-
-
 
