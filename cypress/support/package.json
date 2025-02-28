@@ -1,0 +1,8 @@
+{
+"name": "cypress",
+  "version": "1.0.0",
+  "description": "restful-booker-project",
+    "scripts": {
+      "cy:open": "cypress open"
+    }
+  }
