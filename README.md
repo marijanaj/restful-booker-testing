@@ -12,7 +12,12 @@ Before you start, ensure that you have the following installed:
 
 ## Project Setup
 
-- **Clone the repository: Clone this repository to your local machine using Git:**
+- **Clone the repository: Clone this repository to your local machine**
+  
+  - **Clone the repository https://github.com/mwinteringham/restful-booker**
+  - **Setup Docker**
+  - **Information about start aplication read in https://github.com/mwinteringham/restful-booker/blob/main/README.md**
+
 
 - **Install Dependencies: Navigate to the project folder and install the required npm dependencies:**
 
