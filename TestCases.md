@@ -95,3 +95,54 @@ Header
 2. ANd set XML data show in response
 4. Verify HTTP status code is 400, becuase sent wrong format of body parameters
 
+><h2><summary> Booking - GetBookingIds -API  </summary></h2>
+
+### Check Created Booking  with booking id
+1. Send valid parameters on GET method (https://restful-booker.herokuapp.com/booking/bookingid )
+2.  Verify HTTP status code is 200
+3.  Verify response is in JSON format
+4.  Verify  parameters are present in response
+5.  Check first name value
+6.  Check last name value
+7. Check Additional needs value
+8. Check total price value
+9. Check Deposit paid needs value
+
+><h2><summary> Booking - Update Booking </summary></h2>
+
+### Update Created Booking 
+1. Send valid parameters on PUT method (https://restful-booker.herokuapp.com/booking/bookingid )
+2. Send update json parameters (firstname, lastname, totalprice, deopositpaid, bookingdates, checkin, checkout, and additionalneeds)
+4. Verify HTTP status code is 200
+5. Verify response is in JSON format
+6. Verify  parameters are present in response
+7. Check first name value change
+8. Check last name value change
+9. Check Additional needs value change
+10. Check total price value change
+
+
+><h2><summary> Booking - PartialUpdateBooking -API  </summary></h2>
+
+### Check Partial Update Booking
+1. Send valid parameters  PATCH method (https://restful-booker.herokuapp.com/booking/bookingid )
+2.  Verify HTTP status code is 200
+3.  Verify response is in JSON format
+4.  Verify  parameters are present in response
+5.  Check first name value
+6.  Check last name value
+7. Check Additional needs value
+8. Check total price value
+9. Check Deposit paid needs value
+
+
+    
+><h2><summary> Booking - DeleteBooking -API  </summary></h2>
+
+### Check Delete Booking Booking
+1. Send valid parameters  DELETE method (https://restful-booker.herokuapp.com/booking/bookingid )
+2. Verify HTTP status code is 200
+   
+    
+
+    
