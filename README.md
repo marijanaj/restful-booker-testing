@@ -10,13 +10,17 @@ Before you start, ensure that you have the following installed:
 
       npm install cypress --save-dev
 
-## Project Setup
+## Mock Server Setup  
 
-- **Clone the repository: Clone this repository to your local machine**
-  
-  - **Clone the repository https://github.com/mwinteringham/restful-booker**
-  - **Setup Docker**
-  - **Information about start aplication read in https://github.com/mwinteringham/restful-booker/blob/main/README.md**
+- **Clone the repository https://github.com/mwinteringham/restful-booker**
+- **Setup Docker**
+- **Information about start aplication read in https://github.com/mwinteringham/restful-booker/blob/main/README.md**
+
+## Cypress Project Setup
+
+- **Clone the repository to your local machine**
+
+      https://github.com/marijanaj/restful-booker-testing.git         
 
 
 - **Install Dependencies: Navigate to the project folder and install the required npm dependencies:**
