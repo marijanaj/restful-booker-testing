@@ -21,7 +21,7 @@ const loginPage = {
         expect(response.body.token, 'Token').to.not.be.undefined
         cy.wrap(response.body.token).as('token')
       } else {
-        expect(response.status, "Status Code - 'Auth - CreateToken'").to.eq(200), // Wrong credentials, but status code is 200
+        expect(response.status, "Status Code - 'Auth - CreateToken'").to.eq(200),
           expect(response.body.token, 'Token').to.be.undefined
         expect(response.body.reason, infoMessage).to.eq('Bad credentials')
       }
