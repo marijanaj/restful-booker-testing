@@ -63,3 +63,8 @@ Before you start, ensure that you have the following installed:
 ```
   DELETE /booking/:id
 ```
+## TEST CASES
+
+- **Test cases can find in repository in file  [TestCasses.md](https://github.com/marijanaj/restful-booker-testing/blob/main/TestCases.md)**
+
+*NOTE: In repository  file  [issues.md](https://github.com/marijanaj/restful-booker-testing/blob/main/issues.md) can find reported issues*
