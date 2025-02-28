@@ -85,7 +85,7 @@ describe('CRUD operations (Create, read, update and delete) feature covered', ()
               'Content-Type': 'application/json'
             },
           }).then(({ status, body }) => {
-            expect(status, 'Status Code - Update Booking').to.eq(200) // Exist issue, every time retrun 403 status code, and because of that test failed.
+            expect(status, 'Status Code - Update Booking').to.eq(200) // Exist issue, every time retrun wrong status code, and because of that test failed.
             expect(body.firstname, 'First Name').to.eq(userInfo.firstnameUpdate);
             expect(body.lastname, 'Last name').to.eq(userInfo.lastnameUpdate);
             expect(body.totalprice, 'Total Price').to.eq(userInfo.totalpriceUpdate);
@@ -107,7 +107,7 @@ describe('CRUD operations (Create, read, update and delete) feature covered', ()
               "lastname": userInfo.lastnameSecondUpdate,
             }
           }).then(({ status, body }) => {
-            expect(status, 'Status Code - Get Booking Ids').to.eq(200); // In documentation write 201, but api back 403
+            expect(status, 'Status Code - Get Booking Ids').to.eq(200); 
             expect(body.firstname, 'First Name').to.eq(userInfo.firstnameSecondUpdate);
             expect(body.lastname, 'Last name').to.eq(userInfo.lastnameSecondUpdate);
             expect(body.totalprice, 'Total Price').to.eq(userInfo.totalpriceUpdate);
@@ -125,7 +125,19 @@ describe('CRUD operations (Create, read, update and delete) feature covered', ()
               'Content-Type': 'application/json'
             },
           }).then(({ status }) =>
-            expect(status, 'Status Code - Delete Booking').to.eq(201))  // In documentation write 201, but api back 403
+            expect(status, 'Status Code - Delete Booking').to.eq(201))
+            
+            //GetBookingIds after deleted, check booking deleted
+            cy.request({
+              url: urls.baseUrl + "booking/" + bookingid,
+              bookingid,
+              method: 'GET',
+              log: true,
+              failOnStatusCode: false,
+              Cookie: `token=${token}`,
+            }).then(({ status, body }) => {
+              expect(status, 'Status Code for GetBookingIds after deleted').to.eq(404);
+            })
         })
       })
     })
