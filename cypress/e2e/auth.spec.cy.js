@@ -7,7 +7,7 @@ import urls from "../properties/urls";
 import userInfo from "../properties/usersInformation";
 
 describe('Auth - CreateToken -API Tests covered Create Token', () => {
-  
+
   it('Create token with correct username and password', () => {
     mainPage.authToken(urls.baseUrl + "auth", "Without username - Auth - CreateToken", userInfo.username, userInfo.password, "valid")
   })
@@ -29,6 +29,6 @@ describe('Auth - CreateToken -API Tests covered Create Token', () => {
   })
 
   it('Try create token with wrong password', () => {
-    mainPage.authToken(urls.baseUrl + "auth", "Wrong password - Auth - CreateToken", , "password", "invalid")
+    mainPage.authToken(urls.baseUrl + "auth", "Wrong password - Auth - CreateToken", userInfo.username, "password", "invalid")
   })
- })
+})
