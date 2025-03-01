@@ -27,3 +27,5 @@
 
   - *Because of this issue failed test: CRUD operations (Create, read, update and delete) feature covered - Get valid auth token and create, read, update and delete records of bookinsses* https://github.com/marijanaj/restful-booker-testing/blob/main/cypress/e2e/crud.spec.cy.js
 
+
+*NOTE: When test failed you can find screenshots of failed tests at path **'cypress\screenshots'** which is created after test run*
