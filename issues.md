@@ -15,7 +15,7 @@
 **BUG**: response.headers['content-type'] contains text/html
 **Expect**: response.headers['content-type'] should contains text/xml
 
-  - *Because of this issue failed test: Get valid auth token and create, read, update and delete records of bookinsses - Create booking with XML format, and check response header contain text/xml, and does not contains text/html.* https://github.com/marijanaj/restful-booker-testing/blob/main/cypress/e2e/creat.booking.spec.cy.js
+  - *Because of this issue failed test: Get valid auth token and create, read, update and delete records of bookinsses - Create booking with XML format, and check response header contain text/xml, and does not contains text/html.* https://github.com/marijanaj/restful-booker-testing/blob/main/cypress/e2e/create.booking.spec.cy.js
 
 ### Update Created Booking 
 1. Send valid parameters on PUT method (http://localhost:3001/booking/bookingid )
